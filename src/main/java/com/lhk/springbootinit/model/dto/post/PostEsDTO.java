@@ -17,9 +17,6 @@ import java.util.List;
 
 /**
  * 帖子 ES 包装类
- *
- * 
- * 
  **/
 // todo 取消注释开启 ES（须先配置 ES）
 //@Document(indexName = "post")

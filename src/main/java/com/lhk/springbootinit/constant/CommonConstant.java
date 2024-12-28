@@ -2,9 +2,6 @@ package com.lhk.springbootinit.constant;
 
 /**
  * 通用常量
- *
- * 
- * 
  */
 public interface CommonConstant {
 

@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 消息处理器
- *
- * 
- * 
  **/
 @Component
 public class MessageHandler implements WxMpMessageHandler {
