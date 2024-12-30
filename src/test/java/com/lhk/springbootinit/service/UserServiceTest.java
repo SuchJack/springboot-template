@@ -19,17 +19,33 @@ public class UserServiceTest {
 
     @Test
     void userRegister() {
-        String userAccount = "yupi";
+        String userAccount = "lhk";
         String userPassword = "";
         String checkPassword = "123456";
         try {
             long result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
-            userAccount = "yu";
+            userAccount = "su";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
         } catch (Exception e) {
 
+        }
+    }
+
+    @Test
+    void userRegister2() {
+        // 批量注册用户 100
+        for (int i = 0; i < 100; i++) {
+            String userAccount = "lhkkkkk" + i;
+            String userPassword = "12345678";
+            String checkPassword = "12345678";
+            try {
+                long result = userService.userRegister(userAccount, userPassword, checkPassword);
+                System.out.println(result);
+            } catch (Exception e) {
+
+            }
         }
     }
 }

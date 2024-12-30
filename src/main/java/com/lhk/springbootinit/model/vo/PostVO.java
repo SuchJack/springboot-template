@@ -57,7 +57,7 @@ public class PostVO implements Serializable {
     /**
      * 标签列表
      */
-    private List<String> tagList;
+    private List<String> tags;
 
     /**
      * 创建人信息
@@ -86,7 +86,7 @@ public class PostVO implements Serializable {
         }
         Post post = new Post();
         BeanUtils.copyProperties(postVO, post);
-        List<String> tagList = postVO.getTagList();
+        List<String> tagList = postVO.getTags();
         post.setTags(JSONUtil.toJsonStr(tagList));
         return post;
     }
@@ -103,7 +103,7 @@ public class PostVO implements Serializable {
         }
         PostVO postVO = new PostVO();
         BeanUtils.copyProperties(post, postVO);
-        postVO.setTagList(JSONUtil.toList(post.getTags(), String.class));
+        postVO.setTags(JSONUtil.toList(post.getTags(), String.class));
         return postVO;
     }
 }
