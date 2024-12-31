@@ -11,6 +11,7 @@ import org.apache.commons.lang3.ObjectUtils;
 public enum FileUploadBizEnum {
 
     USER_AVATAR("用户头像", "user_avatar"),
+    POST_PICTURE("帖子图片", "post_picture"),
     GENERATOR_PICTURE("生成器图片", "generator_picture"),
     GENERATOR_DIST("生成器产物包", "generator_dist"),
     GENERATOR_MAKE_TEMPLATE("生成器制作模板文件", "generator_make_template");
