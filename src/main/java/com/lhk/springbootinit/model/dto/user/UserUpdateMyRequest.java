@@ -24,5 +24,10 @@ public class UserUpdateMyRequest implements Serializable {
      */
     private String userProfile;
 
+    /**
+     * 用户性别
+     */
+    private Integer userSex;
+
     private static final long serialVersionUID = 1L;
 }

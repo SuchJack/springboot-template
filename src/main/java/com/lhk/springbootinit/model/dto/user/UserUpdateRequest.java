@@ -1,6 +1,7 @@
 package com.lhk.springbootinit.model.dto.user;
 
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
@@ -27,6 +28,11 @@ public class UserUpdateRequest implements Serializable {
      * 简介
      */
     private String userProfile;
+
+    /**
+     * 用户性别
+     */
+    private Integer userSex;
 
     /**
      * 用户角色：user/admin/ban

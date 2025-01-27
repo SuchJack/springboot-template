@@ -27,5 +27,15 @@ public interface UserConstant {
      */
     String BAN_ROLE = "ban";
 
+    /**
+     * 盐值，混淆密码
+     */
+    String SALT = "SuchJack";
+
+    /**
+     * 默认密码
+     */
+    String USER_DEFAULT_PASSWORD = "12345678";
+
     // endregion
 }

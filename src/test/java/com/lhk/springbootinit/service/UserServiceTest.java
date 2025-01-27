@@ -1,6 +1,8 @@
 package com.lhk.springbootinit.service;
 
 import javax.annotation.Resource;
+
+import com.lhk.springbootinit.model.dto.user.UserRegisterRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,10 +25,15 @@ public class UserServiceTest {
         String userPassword = "";
         String checkPassword = "123456";
         try {
-            long result = userService.userRegister(userAccount, userPassword, checkPassword);
+            UserRegisterRequest userRegisterRequest = new UserRegisterRequest();
+            userRegisterRequest.setUserAccount(userAccount);
+            userRegisterRequest.setUserPassword(userPassword);
+            userRegisterRequest.setCheckPassword(checkPassword);
+            long result = userService.userRegister(userRegisterRequest);
             Assertions.assertEquals(-1, result);
             userAccount = "su";
-            result = userService.userRegister(userAccount, userPassword, checkPassword);
+            userRegisterRequest.setUserAccount(userAccount);
+            result = userService.userRegister(userRegisterRequest);
             Assertions.assertEquals(-1, result);
         } catch (Exception e) {
 
@@ -40,8 +47,12 @@ public class UserServiceTest {
             String userAccount = "lhkkkkk" + i;
             String userPassword = "12345678";
             String checkPassword = "12345678";
+            UserRegisterRequest userRegisterRequest = new UserRegisterRequest();
+            userRegisterRequest.setUserAccount(userAccount);
+            userRegisterRequest.setUserPassword(userPassword);
+            userRegisterRequest.setCheckPassword(checkPassword);
             try {
-                long result = userService.userRegister(userAccount, userPassword, checkPassword);
+                long result = userService.userRegister(userRegisterRequest);
                 System.out.println(result);
             } catch (Exception e) {
 
